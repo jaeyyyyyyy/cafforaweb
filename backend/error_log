@@ -1,0 +1,214 @@
+[06-Nov-2025 03:09:51 UTC] PHP Fatal error:  Uncaught TypeError: setcookie(): Argument #2 ($value) must be of type string, int given in /home/cafforam/public_html/backend/login.php:59
+Stack trace:
+#0 /home/cafforam/public_html/backend/login.php(59): setcookie()
+#1 {main}
+  thrown in /home/cafforam/public_html/backend/login.php on line 59
+[06-Nov-2025 03:10:10 UTC] PHP Fatal error:  Uncaught TypeError: setcookie(): Argument #2 ($value) must be of type string, int given in /home/cafforam/public_html/backend/login.php:59
+Stack trace:
+#0 /home/cafforam/public_html/backend/login.php(59): setcookie()
+#1 {main}
+  thrown in /home/cafforam/public_html/backend/login.php on line 59
+[06-Nov-2025 03:10:19 UTC] PHP Fatal error:  Uncaught TypeError: setcookie(): Argument #2 ($value) must be of type string, int given in /home/cafforam/public_html/backend/login.php:59
+Stack trace:
+#0 /home/cafforam/public_html/backend/login.php(59): setcookie()
+#1 {main}
+  thrown in /home/cafforam/public_html/backend/login.php on line 59
+[06-Nov-2025 03:16:18 UTC] PHP Fatal error:  Uncaught TypeError: setcookie(): Argument #2 ($value) must be of type string, int given in /home/cafforam/public_html/backend/login.php:59
+Stack trace:
+#0 /home/cafforam/public_html/backend/login.php(59): setcookie()
+#1 {main}
+  thrown in /home/cafforam/public_html/backend/login.php on line 59
+[06-Nov-2025 03:17:13 UTC] PHP Fatal error:  Uncaught TypeError: setcookie(): Argument #2 ($value) must be of type string, int given in /home/cafforam/public_html/backend/login.php:63
+Stack trace:
+#0 /home/cafforam/public_html/backend/login.php(63): setcookie()
+#1 {main}
+  thrown in /home/cafforam/public_html/backend/login.php on line 63
+[06-Nov-2025 03:17:15 UTC] PHP Fatal error:  Uncaught TypeError: setcookie(): Argument #2 ($value) must be of type string, int given in /home/cafforam/public_html/backend/login.php:63
+Stack trace:
+#0 /home/cafforam/public_html/backend/login.php(63): setcookie()
+#1 {main}
+  thrown in /home/cafforam/public_html/backend/login.php on line 63
+[06-Nov-2025 03:17:20 UTC] PHP Fatal error:  Uncaught TypeError: setcookie(): Argument #2 ($value) must be of type string, int given in /home/cafforam/public_html/backend/login.php:63
+Stack trace:
+#0 /home/cafforam/public_html/backend/login.php(63): setcookie()
+#1 {main}
+  thrown in /home/cafforam/public_html/backend/login.php on line 63
+[06-Nov-2025 03:19:09 UTC] PHP Parse error:  syntax error, unexpected token ")" in /home/cafforam/public_html/backend/login.php on line 125
+[06-Nov-2025 03:19:14 UTC] PHP Parse error:  syntax error, unexpected token ")" in /home/cafforam/public_html/backend/login.php on line 125
+[06-Nov-2025 03:20:31 UTC] PHP Parse error:  syntax error, unexpected token ")" in /home/cafforam/public_html/backend/login.php on line 104
+[06-Nov-2025 03:20:34 UTC] PHP Parse error:  syntax error, unexpected token ")" in /home/cafforam/public_html/backend/login.php on line 104
+[06-Nov-2025 03:20:36 UTC] PHP Parse error:  syntax error, unexpected token ")" in /home/cafforam/public_html/backend/login.php on line 104
+[06-Nov-2025 03:22:04 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/login.php on line 2
+[06-Nov-2025 03:22:06 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/login.php on line 2
+[06-Nov-2025 03:22:09 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/login.php on line 2
+[06-Nov-2025 03:41:47 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[06-Nov-2025 03:41:48 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[06-Nov-2025 03:51:05 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[06-Nov-2025 03:51:27 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/cafforam/public_html/backend/verify_otp.php on line 22
+[06-Nov-2025 03:51:32 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/cafforam/public_html/backend/verify_otp.php on line 22
+[06-Nov-2025 03:55:54 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[06-Nov-2025 03:55:56 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[06-Nov-2025 03:55:57 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[06-Nov-2025 03:56:14 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/cafforam/public_html/backend/verify_otp.php on line 22
+[06-Nov-2025 03:56:28 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/cafforam/public_html/backend/verify_otp.php on line 22
+[06-Nov-2025 03:56:47 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/cafforam/public_html/backend/verify_otp.php on line 22
+[06-Nov-2025 03:56:50 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/cafforam/public_html/backend/verify_otp.php on line 22
+[06-Nov-2025 03:56:53 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/cafforam/public_html/backend/verify_otp.php on line 22
+[06-Nov-2025 03:56:54 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/cafforam/public_html/backend/verify_otp.php on line 22
+[06-Nov-2025 03:56:55 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/cafforam/public_html/backend/verify_otp.php on line 22
+[06-Nov-2025 03:57:04 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/cafforam/public_html/backend/verify_otp.php on line 22
+[06-Nov-2025 12:26:31 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[06-Nov-2025 12:26:31 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[06-Nov-2025 12:26:32 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[06-Nov-2025 12:26:46 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/cafforam/public_html/backend/verify_otp.php on line 22
+[06-Nov-2025 12:27:10 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/cafforam/public_html/backend/verify_otp.php on line 22
+[06-Nov-2025 12:27:20 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/cafforam/public_html/backend/verify_otp.php on line 22
+[06-Nov-2025 12:28:27 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/cafforam/public_html/backend/verify_otp.php on line 22
+[06-Nov-2025 12:38:51 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[06-Nov-2025 12:38:52 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[06-Nov-2025 12:38:54 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[06-Nov-2025 12:39:20 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/cafforam/public_html/backend/verify_otp.php on line 22
+[06-Nov-2025 12:40:17 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/cafforam/public_html/backend/verify_otp.php on line 22
+[06-Nov-2025 12:41:19 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[06-Nov-2025 12:41:21 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[06-Nov-2025 12:43:35 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[06-Nov-2025 12:43:36 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[06-Nov-2025 12:44:34 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[06-Nov-2025 12:44:35 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[06-Nov-2025 12:45:05 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/cafforam/public_html/backend/verify_otp.php on line 22
+[06-Nov-2025 12:48:52 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[06-Nov-2025 12:48:53 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[06-Nov-2025 12:49:09 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/cafforam/public_html/backend/verify_otp.php on line 22
+[06-Nov-2025 12:49:42 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/cafforam/public_html/backend/verify_otp.php on line 22
+[06-Nov-2025 12:50:54 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[06-Nov-2025 12:50:55 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[06-Nov-2025 12:51:04 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/cafforam/public_html/backend/verify_otp.php on line 22
+[06-Nov-2025 13:13:03 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[06-Nov-2025 13:13:03 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[06-Nov-2025 13:13:47 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/cafforam/public_html/backend/verify_otp.php on line 22
+[06-Nov-2025 13:14:43 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/cafforam/public_html/backend/verify_otp.php on line 22
+[06-Nov-2025 13:14:46 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/cafforam/public_html/backend/verify_otp.php on line 22
+[06-Nov-2025 13:15:58 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[06-Nov-2025 13:15:59 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[06-Nov-2025 13:17:05 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/cafforam/public_html/backend/verify_otp.php on line 22
+[06-Nov-2025 13:19:00 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/cafforam/public_html/backend/verify_otp.php on line 22
+[06-Nov-2025 13:19:44 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/cafforam/public_html/backend/verify_otp.php on line 22
+[06-Nov-2025 13:20:47 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/cafforam/public_html/backend/verify_otp.php on line 22
+[07-Nov-2025 03:26:27 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[07-Nov-2025 03:26:28 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[07-Nov-2025 03:26:40 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/cafforam/public_html/backend/verify_otp.php on line 22
+[07-Nov-2025 03:26:48 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/cafforam/public_html/backend/verify_otp.php on line 22
+[07-Nov-2025 03:28:05 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/cafforam/public_html/backend/verify_otp.php on line 22
+[07-Nov-2025 03:43:22 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[07-Nov-2025 03:43:22 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[07-Nov-2025 03:43:35 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/cafforam/public_html/backend/verify_otp.php on line 22
+[07-Nov-2025 03:44:43 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[07-Nov-2025 03:44:45 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[07-Nov-2025 03:44:46 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[07-Nov-2025 03:44:47 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[07-Nov-2025 03:44:48 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[07-Nov-2025 03:45:07 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/cafforam/public_html/backend/verify_otp.php on line 22
+[07-Nov-2025 03:46:05 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/cafforam/public_html/backend/verify_otp.php on line 22
+[07-Nov-2025 03:47:42 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/cafforam/public_html/backend/verify_otp.php on line 22
+[07-Nov-2025 03:47:45 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/cafforam/public_html/backend/verify_otp.php on line 22
+[07-Nov-2025 03:47:46 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/cafforam/public_html/backend/verify_otp.php on line 22
+[07-Nov-2025 03:47:47 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/cafforam/public_html/backend/verify_otp.php on line 22
+[07-Nov-2025 03:48:28 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/cafforam/public_html/backend/verify_otp.php on line 22
+[07-Nov-2025 03:58:02 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[07-Nov-2025 03:58:03 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[07-Nov-2025 03:58:25 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/cafforam/public_html/backend/verify_otp.php on line 22
+[07-Nov-2025 04:06:05 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/cafforam/public_html/backend/verify_otp.php on line 22
+[07-Nov-2025 04:06:07 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/cafforam/public_html/backend/verify_otp.php on line 22
+[07-Nov-2025 04:06:07 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/cafforam/public_html/backend/verify_otp.php on line 22
+[07-Nov-2025 04:06:08 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/cafforam/public_html/backend/verify_otp.php on line 22
+[07-Nov-2025 04:06:09 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/cafforam/public_html/backend/verify_otp.php on line 22
+[07-Nov-2025 04:06:09 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/cafforam/public_html/backend/verify_otp.php on line 22
+[07-Nov-2025 04:06:10 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/cafforam/public_html/backend/verify_otp.php on line 22
+[07-Nov-2025 04:06:58 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/cafforam/public_html/backend/verify_otp.php on line 22
+[07-Nov-2025 04:06:58 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/cafforam/public_html/backend/verify_otp.php on line 22
+[07-Nov-2025 04:06:59 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/cafforam/public_html/backend/verify_otp.php on line 22
+[07-Nov-2025 04:06:59 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/cafforam/public_html/backend/verify_otp.php on line 22
+[07-Nov-2025 04:07:00 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/cafforam/public_html/backend/verify_otp.php on line 22
+[07-Nov-2025 04:07:00 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/cafforam/public_html/backend/verify_otp.php on line 22
+[07-Nov-2025 04:07:20 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[07-Nov-2025 04:07:21 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[07-Nov-2025 04:07:48 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[07-Nov-2025 04:07:48 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[07-Nov-2025 04:14:28 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[07-Nov-2025 04:14:28 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[07-Nov-2025 04:14:47 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/cafforam/public_html/backend/verify_otp.php on line 22
+[07-Nov-2025 04:22:50 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[07-Nov-2025 04:22:50 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[07-Nov-2025 04:23:12 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/cafforam/public_html/backend/verify_otp.php on line 22
+[07-Nov-2025 04:23:31 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/cafforam/public_html/backend/verify_otp.php on line 22
+[07-Nov-2025 04:23:40 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/login.php on line 3
+[07-Nov-2025 04:23:45 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/login.php on line 3
+[07-Nov-2025 04:23:49 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/cafforam/public_html/backend/verify_otp.php on line 22
+[07-Nov-2025 04:24:07 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/login.php on line 3
+[07-Nov-2025 04:32:35 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/login.php on line 3
+[07-Nov-2025 04:32:49 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/login.php on line 3
+[07-Nov-2025 04:33:09 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/login.php on line 3
+[07-Nov-2025 04:33:13 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/login.php on line 3
+[07-Nov-2025 04:38:00 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/login.php on line 3
+[07-Nov-2025 04:38:24 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[07-Nov-2025 04:38:25 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[07-Nov-2025 04:38:25 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[07-Nov-2025 04:38:44 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/cafforam/public_html/backend/verify_otp.php on line 22
+[07-Nov-2025 04:38:51 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/cafforam/public_html/backend/verify_otp.php on line 22
+[07-Nov-2025 04:40:44 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/cafforam/public_html/backend/verify_otp.php on line 22
+[07-Nov-2025 04:40:57 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/login.php on line 3
+[07-Nov-2025 05:43:15 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[07-Nov-2025 05:43:15 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[07-Nov-2025 05:43:41 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[07-Nov-2025 05:43:41 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[07-Nov-2025 05:43:42 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[07-Nov-2025 05:43:43 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[07-Nov-2025 05:43:44 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[07-Nov-2025 05:43:46 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[07-Nov-2025 05:43:48 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[07-Nov-2025 05:43:49 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[07-Nov-2025 05:43:50 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[07-Nov-2025 05:43:51 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[07-Nov-2025 05:43:53 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[07-Nov-2025 05:43:55 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[07-Nov-2025 05:43:56 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[07-Nov-2025 05:43:59 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[07-Nov-2025 05:52:10 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[07-Nov-2025 05:52:10 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[07-Nov-2025 07:08:33 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[07-Nov-2025 07:08:34 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[07-Nov-2025 07:08:35 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[07-Nov-2025 07:08:46 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/cafforam/public_html/backend/verify_otp.php on line 22
+[07-Nov-2025 07:10:04 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/cafforam/public_html/backend/verify_otp.php on line 22
+[07-Nov-2025 07:10:11 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/cafforam/public_html/backend/verify_otp.php on line 22
+[07-Nov-2025 07:11:12 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/cafforam/public_html/backend/verify_otp.php on line 22
+[07-Nov-2025 07:23:34 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[07-Nov-2025 07:23:36 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[07-Nov-2025 07:23:37 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[07-Nov-2025 07:23:38 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[07-Nov-2025 07:23:39 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[07-Nov-2025 07:23:41 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[07-Nov-2025 07:23:41 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[07-Nov-2025 07:23:42 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[07-Nov-2025 07:23:44 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[07-Nov-2025 07:23:50 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[07-Nov-2025 07:24:05 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/cafforam/public_html/backend/verify_otp.php on line 22
+[07-Nov-2025 07:39:32 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/cafforam/public_html/backend/verify_otp.php on line 22
+[07-Nov-2025 07:44:54 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/cafforam/public_html/backend/verify_otp.php on line 22
+[07-Nov-2025 07:58:23 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[07-Nov-2025 07:58:24 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[07-Nov-2025 07:58:42 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/cafforam/public_html/backend/verify_otp.php on line 22
+[07-Nov-2025 07:59:38 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/cafforam/public_html/backend/verify_otp.php on line 22
+[07-Nov-2025 08:59:19 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[07-Nov-2025 08:59:20 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[07-Nov-2025 08:59:21 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[07-Nov-2025 08:59:35 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[07-Nov-2025 08:59:36 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[07-Nov-2025 08:59:37 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[07-Nov-2025 08:59:39 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[07-Nov-2025 08:59:40 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[07-Nov-2025 08:59:40 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[07-Nov-2025 08:59:41 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[07-Nov-2025 08:59:42 UTC] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home/cafforam/public_html/backend/check_email.php on line 3
+[07-Nov-2025 08:59:56 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/cafforam/public_html/backend/verify_otp.php on line 22
+[07-Nov-2025 09:03:41 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/cafforam/public_html/backend/verify_otp.php on line 22

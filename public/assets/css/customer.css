@@ -1,0 +1,60 @@
+/* Customer page tweaks */
+.hero {
+  background: url("../img/hero.jpg") center/cover no-repeat, #f6f2ee;
+  padding: 64px 0;
+  color: #3a2b22;
+}
+.hero .btn {
+  background: #c49a6c;
+  border: none;
+}
+.hero .btn:hover {
+  background: #a87f54;
+}
+
+/* Grid katalog */
+.catalog-section .card {
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid #eee;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.catalog-section .card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+.catalog-section img {
+  height: 160px;
+  object-fit: cover;
+}
+.catalog-section .card-title {
+  font-weight: 600;
+  font-size: 1rem;
+}
+.catalog-section .price {
+  color: #6d5e51;
+}
+.catalog-section .btn {
+  background: #c49a6c;
+  border: none;
+}
+.catalog-section .btn:hover {
+  background: #a87f54;
+}
+
+/* Icon button utility (sesuai style index) */
+.icon-btn {
+  background: transparent;
+  border: none;
+  padding: 6px 8px;
+  border-radius: 10px;
+}
+.icon-btn:hover {
+  background: rgba(0, 0, 0, 0.04);
+}
+.badge-cart {
+  position: absolute;
+  top: -4px;
+  right: -6px;
+  font-size: 0.7rem;
+}

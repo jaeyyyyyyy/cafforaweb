@@ -1,0 +1,230 @@
+/* ============ Caffora Auth.css ============ */
+:root {
+  /* Palet Caffora */
+  --coffee-dark: #4b3f36;
+  --coffee: #5a4334;
+  --latte: #f9f8f7;
+  --caramel: #c49a6c;
+  --caramel-dark: #a87f54;
+  --ink: #1e1b16;
+  --muted: #8a7a6b;
+  --ring: rgba(196, 154, 108, 0.15);
+}
+
+/* -------- Body Variants -------- */
+/* Gunakan salah satu class ini di <body> */
+.auth-body--white {
+  background: #fff;
+}
+.auth-body--gradient {
+  background: linear-gradient(180deg, #e8dbca 0%, #fff 72%);
+}
+
+/* Wrapper: center vertically */
+.auth-wrap {
+  min-height: 100dvh;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  place-items: center;
+  font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial,
+    sans-serif;
+  color: var(--coffee-dark);
+  padding: 24px 16px;
+}
+
+/* Card */
+.card-login,
+.card-register {
+  width: 100%;
+  max-width: 520px;
+  background: #fff;
+  border-radius: 20px;
+  padding: 32px 28px 26px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(90, 67, 52, 0.06);
+}
+
+/* Header / brand */
+.head {
+  margin-bottom: 18px;
+  text-align: center;
+}
+.brand-icon {
+  font-size: 2.4rem;
+  line-height: 1;
+  color: #ffc107;
+}
+.brand-title {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  font-size: 2rem;
+  margin: 4px 0 2px;
+  color: var(--coffee);
+}
+.subtitle {
+  color: var(--muted);
+  margin: 0;
+}
+
+/* Inputs */
+.form-label {
+  font-weight: 500;
+  color: #000; /* permintaan: label hitam */
+  margin: 0 0 6px;
+}
+.mb-16 {
+  margin-bottom: 16px;
+}
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.form-control {
+  width: 100%;
+  height: 48px;
+  border-radius: 14px;
+  border: 1.5px solid #eee5d8;
+  background: #f9fafb;
+  padding: 0 14px;
+  font-size: 1rem;
+  color: var(--ink);
+  transition: border-color 0.18s, box-shadow 0.18s, background 0.18s;
+}
+.form-control::placeholder {
+  color: #b8afa6;
+}
+.form-control:focus {
+  background: #fff;
+  border-color: var(--caramel);
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem var(--ring);
+}
+
+/* Password with eye */
+.input-wrap {
+  position: relative;
+}
+.input-wrap .form-control {
+  padding-right: 44px;
+}
+.toggle {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 34px;
+  width: 34px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  background: transparent;
+  color: #7c6a5b;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.toggle:hover {
+  background: #f2efe9;
+}
+.toggle:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.18rem var(--ring);
+}
+
+/* Validation helper (optional) */
+.invalid {
+  display: none;
+  font-size: 0.86rem;
+  color: #b42318;
+  margin-top: 6px;
+}
+.is-invalid + .invalid,
+.input-wrap .is-invalid ~ .invalid {
+  display: block;
+}
+
+/* Button */
+.btn-primary {
+  display: inline-grid;
+  place-items: center;
+  width: 100%;
+  height: 48px;
+  border: 0;
+  border-radius: 14px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  color: #fff;
+  background: linear-gradient(
+    90deg,
+    var(--caramel) 0%,
+    var(--caramel-dark) 100%
+  );
+  box-shadow: 0 8px 24px rgba(168, 127, 84, 0.24);
+  transition: transform 0.06s ease, filter 0.18s ease;
+  cursor: pointer;
+}
+.btn-primary:hover {
+  filter: saturate(1.05) brightness(1.02);
+}
+.btn-primary:active {
+  transform: translateY(1px);
+}
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Link kecil di bawah */
+.foot-note {
+  text-align: center;
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 0.98rem;
+}
+.foot-note a {
+  color: var(--caramel-dark);
+  font-weight: 600;
+  text-decoration: none;
+}
+.foot-note a:hover {
+  text-decoration: underline;
+}
+
+/* Footer copyright */
+.copy {
+  margin-top: 18px;
+  text-align: center;
+  color: #9a8d7f;
+  font-size: 0.92rem;
+}
+
+/* OTP group (kalau dipakai di register) */
+.otp-wrap {
+  margin-top: 18px;
+  border-top: 1px dashed #eddcc6;
+  padding-top: 16px;
+}
+.otp-hint {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* Small screen tuning */
+@media (max-width: 420px) {
+  .card-login,
+  .card-register {
+    padding: 24px 16px 20px;
+    border-radius: 16px;
+  }
+  .brand-title {
+    font-size: 1.8rem;
+  }
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}

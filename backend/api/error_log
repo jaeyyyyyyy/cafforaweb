@@ -1,0 +1,84 @@
+[05-Nov-2025 15:22:25 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/cafforam/public_html/backend/config.php:18
+Stack trace:
+#0 /home/cafforam/public_html/backend/config.php(18): mysqli->__construct()
+#1 /home/cafforam/public_html/backend/api/menu.php(6): require_once('/home/cafforam/...')
+#2 {main}
+  thrown in /home/cafforam/public_html/backend/config.php on line 18
+[05-Nov-2025 15:23:44 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/cafforam/public_html/backend/config.php:18
+Stack trace:
+#0 /home/cafforam/public_html/backend/config.php(18): mysqli->__construct()
+#1 /home/cafforam/public_html/backend/api/menu.php(6): require_once('/home/cafforam/...')
+#2 {main}
+  thrown in /home/cafforam/public_html/backend/config.php on line 18
+[05-Nov-2025 15:27:17 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/cafforam/public_html/backend/config.php:18
+Stack trace:
+#0 /home/cafforam/public_html/backend/config.php(18): mysqli->__construct()
+#1 /home/cafforam/public_html/backend/api/menu.php(6): require_once('/home/cafforam/...')
+#2 {main}
+  thrown in /home/cafforam/public_html/backend/config.php on line 18
+[05-Nov-2025 15:32:22 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/cafforam/public_html/backend/config.php:18
+Stack trace:
+#0 /home/cafforam/public_html/backend/config.php(18): mysqli->__construct()
+#1 /home/cafforam/public_html/backend/api/menu.php(6): require_once('/home/cafforam/...')
+#2 {main}
+  thrown in /home/cafforam/public_html/backend/config.php on line 18
+[05-Nov-2025 15:32:24 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/cafforam/public_html/backend/config.php:18
+Stack trace:
+#0 /home/cafforam/public_html/backend/config.php(18): mysqli->__construct()
+#1 /home/cafforam/public_html/backend/api/menu.php(6): require_once('/home/cafforam/...')
+#2 {main}
+  thrown in /home/cafforam/public_html/backend/config.php on line 18
+[05-Nov-2025 15:32:25 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/cafforam/public_html/backend/config.php:18
+Stack trace:
+#0 /home/cafforam/public_html/backend/config.php(18): mysqli->__construct()
+#1 /home/cafforam/public_html/backend/api/menu.php(6): require_once('/home/cafforam/...')
+#2 {main}
+  thrown in /home/cafforam/public_html/backend/config.php on line 18
+[05-Nov-2025 16:43:25 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Field 'id' doesn't have a default value in /home/cafforam/public_html/backend/api/notifications.php:46
+Stack trace:
+#0 /home/cafforam/public_html/backend/api/notifications.php(46): mysqli_stmt->execute()
+#1 /home/cafforam/public_html/backend/api/notifications.php(94): insert_notif()
+#2 {main}
+  thrown in /home/cafforam/public_html/backend/api/notifications.php on line 46
+[05-Nov-2025 16:43:29 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Field 'id' doesn't have a default value in /home/cafforam/public_html/backend/api/notifications.php:46
+Stack trace:
+#0 /home/cafforam/public_html/backend/api/notifications.php(46): mysqli_stmt->execute()
+#1 /home/cafforam/public_html/backend/api/notifications.php(94): insert_notif()
+#2 {main}
+  thrown in /home/cafforam/public_html/backend/api/notifications.php on line 46
+[05-Nov-2025 16:45:58 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Field 'id' doesn't have a default value in /home/cafforam/public_html/backend/lib/audit_helper.php:129
+Stack trace:
+#0 /home/cafforam/public_html/backend/lib/audit_helper.php(129): mysqli_stmt->execute()
+#1 /home/cafforam/public_html/backend/api/orders.php(427): audit_log()
+#2 {main}
+  thrown in /home/cafforam/public_html/backend/lib/audit_helper.php on line 129
+[05-Nov-2025 16:46:03 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Field 'id' doesn't have a default value in /home/cafforam/public_html/backend/lib/audit_helper.php:129
+Stack trace:
+#0 /home/cafforam/public_html/backend/lib/audit_helper.php(129): mysqli_stmt->execute()
+#1 /home/cafforam/public_html/backend/api/orders.php(427): audit_log()
+#2 {main}
+  thrown in /home/cafforam/public_html/backend/lib/audit_helper.php on line 129
+[05-Nov-2025 16:46:05 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Field 'id' doesn't have a default value in /home/cafforam/public_html/backend/lib/audit_helper.php:129
+Stack trace:
+#0 /home/cafforam/public_html/backend/lib/audit_helper.php(129): mysqli_stmt->execute()
+#1 /home/cafforam/public_html/backend/api/orders.php(427): audit_log()
+#2 {main}
+  thrown in /home/cafforam/public_html/backend/lib/audit_helper.php on line 129
+[05-Nov-2025 16:46:07 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Field 'id' doesn't have a default value in /home/cafforam/public_html/backend/lib/audit_helper.php:129
+Stack trace:
+#0 /home/cafforam/public_html/backend/lib/audit_helper.php(129): mysqli_stmt->execute()
+#1 /home/cafforam/public_html/backend/api/orders.php(427): audit_log()
+#2 {main}
+  thrown in /home/cafforam/public_html/backend/lib/audit_helper.php on line 129
+[05-Nov-2025 16:46:18 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Field 'id' doesn't have a default value in /home/cafforam/public_html/backend/lib/audit_helper.php:129
+Stack trace:
+#0 /home/cafforam/public_html/backend/lib/audit_helper.php(129): mysqli_stmt->execute()
+#1 /home/cafforam/public_html/backend/api/orders.php(427): audit_log()
+#2 {main}
+  thrown in /home/cafforam/public_html/backend/lib/audit_helper.php on line 129
+[05-Nov-2025 16:46:23 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Field 'id' doesn't have a default value in /home/cafforam/public_html/backend/lib/audit_helper.php:129
+Stack trace:
+#0 /home/cafforam/public_html/backend/lib/audit_helper.php(129): mysqli_stmt->execute()
+#1 /home/cafforam/public_html/backend/api/orders.php(427): audit_log()
+#2 {main}
+  thrown in /home/cafforam/public_html/backend/lib/audit_helper.php on line 129

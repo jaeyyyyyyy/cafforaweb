@@ -1,0 +1,75 @@
+[
+  {
+    "name": "Matcha Cheesecake",
+    "price": 42000,
+    "category": "pastry",
+    "img": "assets/img/matcha.jpg"
+  },
+  {
+    "name": "Chicken Thai",
+    "price": 45000,
+    "category": "food",
+    "img": "assets/img/chickenthai.jpg"
+  },
+  {
+    "name": "Almond Croissant",
+    "price": 28000,
+    "category": "pastry",
+    "img": "assets/img/croissannt.jpg"
+  },
+  {
+    "name": "Lazy Lemon",
+    "price": 25000,
+    "category": "drink",
+    "img": "assets/img/lazylemon.jpg"
+  },
+  {
+    "name": "Lemon Tea",
+    "price": 18000,
+    "category": "drink",
+    "img": "assets/img/lemontea.jpg"
+  },
+  {
+    "name": "Pound Cake",
+    "price": 32000,
+    "category": "pastry",
+    "img": "assets/img/poundcake.jpg"
+  },
+  {
+    "name": "Nasi Goreng Bali",
+    "price": 40000,
+    "category": "food",
+    "img": "assets/img/nasigoreng.jpg"
+  },
+  {
+    "name": " Korean Chicken Wings",
+    "price": 45000,
+    "category": "food",
+    "img": "assets/img/korean.jpg"
+  },
+  {
+    "name": "Salmon Scrumble",
+    "price": 40000,
+    "category": "food",
+    "img": "assets/img/salmon.jpg"
+  },
+  {
+    "name": "Basque Cheesecake",
+    "price": 40000,
+    "category": "pastry",
+    "img": "assets/img/basque.jpg"
+  },
+  {
+    "name": "Chiffon Cake",
+    "price": 180000,
+    "category": "pastry",
+    "img": "assets/img/chiffon.jpg"
+  },
+
+  {
+    "name": "Avocado Toast",
+    "price": 55000,
+    "category": "food",
+    "img": "assets/img/avocadotoast.jpg"
+  }
+]

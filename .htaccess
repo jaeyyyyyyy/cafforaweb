@@ -1,0 +1,117 @@
+# =============================
+# Caffora .htaccess (clean URL)
+# =============================
+
+# 0) Matikan directory listing
+Options -Indexes
+
+# 1) Default front controller
+DirectoryIndex index.php index.html
+
+RewriteEngine On
+RewriteBase /
+
+# 2) Paksa host kanonis + HTTPS
+RewriteCond %{HTTP_HOST} !^caffora\.my\.id$ [NC]
+RewriteRule ^ https://caffora.my.id%{REQUEST_URI} [R=301,L]
+
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+# 3) Hindari URL mencurigakan di PATH (kadang picu "dangerous site")
+RewriteCond %{REQUEST_URI} (https?:\/\/) [NC]
+RewriteRule ^ / [R=301,L]
+
+# 4) BACKEND GUARD
+# --- ALLOWLIST: ijinkan endpoint yang memang dipanggil form/JS
+#     (harus diletakkan SEBELUM rule blokir /backend)
+# Auth core
+RewriteRule ^backend/(login|register|verify_otp|check_email|auth_status|logout)\.php$ - [L]   # ← tambah logout
+# Semua API di /backend/api/* termasuk orders_cancel.php, notifications.php, dsb.
+RewriteRule ^backend/api/ - [L]
+
+# --- Block GET langsung ke /backend dari browser (ngetik URL file)
+RewriteCond %{THE_REQUEST} \s/+backend/ [NC]
+RewriteCond %{REQUEST_METHOD} GET
+RewriteRule ^ - [F]
+
+# ----- ROUTE UI BERSIH (tanpa /public) -----
+# Landing
+RewriteRule ^$                                         public/index.html                     [L]
+
+# Auth (HTML pages)
+RewriteRule ^login$                                    public/login.html                     [L]
+RewriteRule ^register$                                 public/register.html                  [L]
+RewriteRule ^verify_otp$                               public/verify_otp.html                [L]
+
+# Dashboards (root)
+RewriteRule ^admin$                                    public/admin/index.php                [L]
+RewriteRule ^karyawan$                                 public/karyawan/index.php             [L]
+RewriteRule ^customer$                                 public/customer/index.php             [L]
+
+# ----- DASHBOARD SUBPAGES (sidebar clean URLs) -----
+# /admin/orders, /admin/catalog, /admin/users, /admin/finance, /admin/notifications_send,
+# /admin/audit, /admin/settings, /admin/help, /admin/receipt, dll.
+RewriteRule ^admin/([a-z0-9_-]+)$                      public/admin/$1.php                   [QSA,L]
+RewriteRule ^karyawan/([a-z0-9_-]+)$                   public/karyawan/$1.php                [QSA,L]
+RewriteRule ^customer/([a-z0-9_-]+)$                   public/customer/$1.php                [QSA,L]
+
+# ----- ENDPOINT BERSIH -> backend -----
+# Auth (POST/GET/AJAX) via /auth/*
+RewriteRule ^auth/login$                               backend/login.php                     [QSA,L]
+RewriteRule ^auth/logout$                              backend/logout.php                    [QSA,L]  # ← tambah route clean
+RewriteRule ^auth/register$                            backend/register.php                  [QSA,L]
+RewriteRule ^auth/verify$                              backend/verify_otp.php                [QSA,L]
+RewriteRule ^auth/otp-resend$                          backend/verify_otp.php                [QSA,L]
+RewriteRule ^auth/check-email$                         backend/check_email.php               [QSA,L]
+RewriteRule ^auth/status$                              backend/auth_status.php               [QSA,L]
+
+# API (front clean): /api/menu, /api/orders, /api/notifications, /api/orders_cancel, dst
+RewriteRule ^api/menu$                                 backend/api/menu.php                  [QSA,L]
+RewriteRule ^api/orders$                               backend/api/orders.php                [QSA,L]
+RewriteRule ^api/notifications$                        backend/api/notifications.php         [QSA,L]
+RewriteRule ^api/orders_cancel$                        backend/api/orders_cancel.php         [QSA,L]
+
+# ----- REDIRECT LEGACY /public/* -> clean -----
+# Auth pages
+RewriteRule ^public/login\.html?$                      /login                                [R=301,L]
+RewriteRule ^public/register\.html?$                   /register                             [R=301,L]
+RewriteRule ^public/verify_otp\.html?$                 /verify_otp                           [R=301,L]
+# Dashboard root
+RewriteRule ^public/admin/?$                           /admin                                [R=301,L]
+RewriteRule ^public/karyawan/?$                        /karyawan                             [R=301,L]
+RewriteRule ^public/customer/?$                        /customer                             [R=301,L]
+# Dashboard subpages (PHP) -> clean
+RewriteRule ^public/(admin|karyawan|customer)/([a-z0-9_-]+)\.php$ /$1/$2                     [R=301,L]
+# (opsional jika ada .html di subpages)
+RewriteRule ^public/(admin|karyawan|customer)/([a-z0-9_-]+)\.html$ /$1/$2                    [R=301,L]
+
+# ----- LAYANI ASSET DI /public TANPA UBAH KODE LAMA -----
+# Jika file/dir ada di root → layani apa adanya.
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Jika TIDAK ada di root tetapi ada padanan di /public → arahkan ke /public/<path>
+RewriteCond %{DOCUMENT_ROOT}/public/%{REQUEST_URI} -f [OR]
+RewriteCond %{DOCUMENT_ROOT}/public/%{REQUEST_URI} -d
+RewriteRule ^(.*)$                                    public/$1                              [L]
+
+# Fallback terakhir (kalau pakai router index.php)
+RewriteRule ^ index.php [L]
+
+# =============================
+# Security Headers
+# =============================
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set X-XSS-Protection "1; mode=block"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+  Header always set Content-Security-Policy "upgrade-insecure-requests; default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval'"
+  Header unset X-Powered-By
+</IfModule>
+
+ServerSignature Off
