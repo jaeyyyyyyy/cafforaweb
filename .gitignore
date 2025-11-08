@@ -1,0 +1,24 @@
+# PHP / Composer
+vendor/
+composer.phar
+
+# Env & kredensial
+.env
+.env.*
+
+# System/IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Cache / logs
+node_modules/
+*.log
+storage/
+cache/
+tmp/
+
+# Uploads
+public/uploads/
+public/assets/tmp/
