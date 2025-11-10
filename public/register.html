@@ -6,91 +6,302 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Security meta (fallback; server-side tetap via .htaccess) -->
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval'">
-    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">
-    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-    <meta http-equiv="X-Content-Type-Options" content="nosniff">
-    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
-    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
-    <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="upgrade-insecure-requests; default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval'"
+    />
+    <meta
+      http-equiv="Strict-Transport-Security"
+      content="max-age=31536000; includeSubDomains"
+    />
+    <meta
+      http-equiv="Referrer-Policy"
+      content="strict-origin-when-cross-origin"
+    />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+    <meta
+      http-equiv="Permissions-Policy"
+      content="geolocation=(), microphone=(), camera=()"
+    />
 
     <!-- Fonts & Bootstrap -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet"/>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet"/>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
 
     <style>
-      :root { --gold:#ffd54f; --brown:#4b3f36; --muted:#8b8179; --border-soft:#e5e7eb; }
-      body{
-        font-family:"Poppins",sans-serif; margin:0; color:var(--brown);
-        background:
-          radial-gradient(circle at 20% 15%,rgba(255,248,219,.9) 0,rgba(255,248,219,0) 38%),
-          radial-gradient(circle at 80% 10%,rgba(255,236,185,.9) 0,rgba(255,236,185,0) 38%),
-          linear-gradient(160deg,#fff7d5 0%,#fffef8 42%,#ffffff 100%);
-        min-height:100vh;
+      :root {
+        --gold: #ffd54f;
+        --brown: #4b3f36;
+        --muted: #8b8179;
+        --border-soft: #e5e7eb;
       }
-      .reg-wrap{ min-height:100vh; display:flex; justify-content:center; align-items:center; padding:16px; }
-      .reg-card{
-        width:100%; max-width:520px; background:#ffffff; border-radius:20px;
-        border:1px solid rgba(255,214,114,.35);
-        box-shadow:0 28px 45px rgba(255,191,73,.12),0 8px 18px rgba(255,191,73,.08);
-        padding:26px 30px 24px;
+      body {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        color: var(--brown);
+        background: radial-gradient(
+            circle at 20% 15%,
+            rgba(255, 248, 219, 0.9) 0,
+            rgba(255, 248, 219, 0) 38%
+          ),
+          radial-gradient(
+            circle at 80% 10%,
+            rgba(255, 236, 185, 0.9) 0,
+            rgba(255, 236, 185, 0) 38%
+          ),
+          linear-gradient(160deg, #fff7d5 0%, #fffef8 42%, #ffffff 100%);
+        min-height: 100vh;
       }
-      .header-brand{ text-align:center; margin-bottom:20px; }
-      .header-brand .brand{ font-family:"Playfair Display",serif; font-weight:700; font-size:1.95rem; color:var(--brown); }
-      .muted{ color:var(--muted); }
-
-      .form-label{ font-weight:600; font-size:13.5px; margin-bottom:5px; color:var(--brown); }
-      .mb-field{ margin-bottom:16px; }
-
-      .form-control{
-        height:40px; border-radius:10px; border:1px solid var(--border-soft);
-        font-size:14px; padding:0 14px; transition:border-color .2s;
+      .reg-wrap {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 16px;
       }
-      .form-control:focus{ border-color:rgba(255,211,95,.9); box-shadow:none; }
-
-      .input-hint{ font-size:12px; margin-top:4px; }
-      .input-hint.error{ color:#dc3545; }
-
-      .pw-wrap{ position:relative; }
-      .pw-input{ height:40px; border-radius:10px; padding-right:42px; }
-      .pw-toggle{
-        position:absolute; right:10px; top:50%; transform:translateY(-50%);
-        background:transparent; border:none; width:26px; height:26px;
-        display:flex; align-items:center; justify-content:center; color:var(--brown); cursor:pointer;
+      .reg-card {
+        width: 100%;
+        max-width: 520px;
+        background: #ffffff;
+        border-radius: 20px;
+        border: 1px solid rgba(255, 214, 114, 0.35);
+        box-shadow: 0 28px 45px rgba(255, 191, 73, 0.12),
+          0 8px 18px rgba(255, 191, 73, 0.08);
+        padding: 26px 30px 24px;
+      }
+      .header-brand {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .header-brand .brand {
+        font-family: "Playfair Display", serif;
+        font-weight: 700;
+        font-size: 1.95rem;
+        color: var(--brown);
+      }
+      .muted {
+        color: var(--muted);
       }
 
-      .agree-row{ display:flex; align-items:center; gap:10px; margin-bottom:16px; font-size:12.5px; color:var(--muted); }
-      .agree-row input[type="checkbox"]{ width:15px; height:15px; cursor:pointer; }
-
-      .btn-brand{
-        width:100%; height:42px; border-radius:10px; border:none;
-        background:var(--gold); color:var(--brown); font-weight:600; font-size:.9rem;
+      .form-label {
+        font-weight: 600;
+        font-size: 13.5px;
+        margin-bottom: 5px;
+        color: var(--brown);
       }
-      .btn-brand:disabled{ opacity:.5; cursor:not-allowed; }
+      .mb-field {
+        margin-bottom: 16px;
+      }
 
-      .social-title{ text-align:center; font-size:12px; color:var(--muted); margin:16px 0 14px; }
-      .social-row{ display:flex; justify-content:center; gap:22px; margin-bottom:6px; }
+      .form-control {
+        height: 40px;
+        border-radius: 10px;
+        border: 1px solid var(--border-soft);
+        font-size: 14px;
+        padding: 0 14px;
+        transition: border-color 0.2s;
+      }
+      .form-control:focus {
+        border-color: rgba(255, 211, 95, 0.9);
+        box-shadow: none;
+      }
 
-      .to-login{ text-align:center; margin-top:12px; color:var(--muted); }
-      .to-login a{ color:#0d6efd; text-decoration:none; font-weight:500; }
+      .input-hint {
+        font-size: 12px;
+        margin-top: 4px;
+      }
+      .input-hint.error {
+        color: #dc3545;
+      }
 
-      .modal.custom-terms{ position:fixed; inset:0; display:none; align-items:center; justify-content:center; background:rgba(0,0,0,.35); padding:16px; z-index:1055; }
-      .modal.custom-terms.open{ display:flex; }
-      .modal-card{ width:100%; max-width:640px; max-height:90vh; background:#fff; border-radius:14px; overflow:hidden; display:flex; flex-direction:column; }
-      .modal-head{ padding:14px 16px 12px; border-bottom:1px solid #eee; display:flex; justify-content:space-between; gap:12px; }
-      .modal-title{ margin:0; font-weight:600; font-size:1.1rem; }
-      .modal-body{ flex:1; overflow:auto; padding:16px; line-height:1.6; font-size:.9rem; }
-      .modal-foot{ padding:12px 16px; border-top:1px solid #eee; display:flex; gap:10px; justify-content:flex-end; }
-      .btn-outline-foot{ background:#fff; border:1px solid #ddd; border-radius:12px; height:38px; padding:0 16px; font-weight:600; cursor:pointer; }
-      .btn-accept{ background:var(--gold); color:var(--brown); border:0; border-radius:12px; height:38px; padding:0 16px; font-weight:600; cursor:pointer; }
-      .btn-accept:disabled{ background:#f0e3b0; color:#9b8a5d; }
+      .pw-wrap {
+        position: relative;
+      }
+      .pw-input {
+        height: 40px;
+        border-radius: 10px;
+        padding-right: 42px;
+      }
+      .pw-toggle {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: transparent;
+        border: none;
+        width: 26px;
+        height: 26px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--brown);
+        cursor: pointer;
+      }
 
-      @media (max-width:768px){
-        body{ background:#ffffff; }
-        .reg-wrap{ min-height:100vh; display:flex; justify-content:center; align-items:center; padding-top:12px; padding-bottom:20px; }
-        .reg-card{ background:transparent; border:none; box-shadow:none; border-radius:0; max-width:360px; width:100%; margin:0 auto; padding:0 16px 16px; }
-        .btn-brand{ border-radius:12px; }
+      .agree-row {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 16px;
+        font-size: 12.5px;
+        color: var(--muted);
+      }
+      .agree-row input[type="checkbox"] {
+        width: 15px;
+        height: 15px;
+        cursor: pointer;
+      }
+
+      .btn-brand {
+        width: 100%;
+        height: 42px;
+        border-radius: 10px;
+        border: none;
+        background: var(--gold);
+        color: var(--brown);
+        font-weight: 600;
+        font-size: 0.9rem;
+      }
+      .btn-brand:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+
+      .social-title {
+        text-align: center;
+        font-size: 12px;
+        color: var(--muted);
+        margin: 16px 0 14px;
+      }
+      .social-row {
+        display: flex;
+        justify-content: center;
+        gap: 22px;
+        margin-bottom: 6px;
+      }
+
+      .to-login {
+        text-align: center;
+        margin-top: 12px;
+        color: var(--muted);
+      }
+      .to-login a {
+        color: #0d6efd;
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      /* ===== Modal S&K ===== */
+      .modal.custom-terms {
+        position: fixed;
+        inset: 0;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        background: rgba(0, 0, 0, 0.35);
+        padding: 16px;
+        z-index: 1055;
+      }
+      .modal.custom-terms.open {
+        display: flex;
+      }
+
+      /* scroll pada keseluruhan kartu modal (header & footer ikut bergeser) */
+      .modal-card {
+        width: 100%;
+        max-width: 640px;
+        max-height: 70vh;
+        background: #fff;
+        border-radius: 14px;
+        overflow: auto; /* kontainer scroll */
+        display: block;
+      }
+      .modal-head {
+        padding: 14px 16px 12px;
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+      }
+      .modal-title {
+        margin: 0;
+        font-weight: 600;
+        font-size: 1.1rem;
+      }
+
+      .modal-body {
+        padding: 16px;
+        line-height: 1.6;
+        font-size: 0.9rem;
+        overflow: visible;
+      }
+      .modal-foot {
+        padding: 12px 16px;
+        display: flex;
+        gap: 10px;
+        justify-content: flex-end;
+      }
+
+      .btn-outline-foot {
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 12px;
+        height: 38px;
+        padding: 0 16px;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      .btn-accept {
+        background: var(--gold);
+        color: var(--brown);
+        border: 0;
+        border-radius: 12px;
+        height: 38px;
+        padding: 0 16px;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      .btn-accept:disabled {
+        background: #f0e3b0;
+        color: #9b8a5d;
+      }
+
+      @media (max-width: 768px) {
+        body {
+          background: #ffffff;
+        }
+        .reg-wrap {
+          min-height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding-top: 12px;
+          padding-bottom: 20px;
+        }
+        .reg-card {
+          background: transparent;
+          border: none;
+          box-shadow: none;
+          border-radius: 0;
+          max-width: 360px;
+          width: 100%;
+          margin: 0 auto;
+          padding: 0 16px 16px;
+        }
+        .btn-brand {
+          border-radius: 12px;
+        }
       }
     </style>
   </head>
@@ -104,33 +315,80 @@
         </div>
 
         <!-- Gunakan route bersih + fallback submit standar -->
-        <form id="registerForm" action="/auth/register" method="post" novalidate autocomplete="off" spellcheck="false">
+        <form
+          id="registerForm"
+          action="/auth/register"
+          method="post"
+          novalidate
+          autocomplete="off"
+          spellcheck="false"
+        >
           <div class="mb-field">
             <label class="form-label" for="name">Nama Lengkap</label>
-            <input type="text" id="name" name="name" class="form-control" placeholder="Nama Anda" required/>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="form-control"
+              placeholder="Nama Anda"
+              required
+            />
           </div>
 
           <div class="mb-field">
             <label class="form-label" for="email">Email</label>
-            <input type="email" id="email" name="email" class="form-control" placeholder="email@contoh.com" required/>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="form-control"
+              placeholder="email@contoh.com"
+              required
+            />
             <small id="emailHint" class="input-hint"></small>
           </div>
 
           <div class="mb-field">
             <label class="form-label" for="password">Password</label>
             <div class="pw-wrap">
-              <input type="password" id="password" name="password" class="form-control pw-input" placeholder="Minimal 6 karakter" required/>
-              <button type="button" class="pw-toggle" id="togglePw1" aria-label="Tampilkan password">
+              <input
+                type="password"
+                id="password"
+                name="password"
+                class="form-control pw-input"
+                placeholder="Minimal 6 karakter"
+                required
+              />
+              <button
+                type="button"
+                class="pw-toggle"
+                id="togglePw1"
+                aria-label="Tampilkan password"
+              >
                 <i id="eyeIcon1" class="bi bi-eye"></i>
               </button>
             </div>
           </div>
 
           <div class="mb-field">
-            <label class="form-label" for="confirm_password">Konfirmasi Password</label>
+            <label class="form-label" for="confirm_password"
+              >Konfirmasi Password</label
+            >
             <div class="pw-wrap">
-              <input type="password" id="confirm_password" name="confirm_password" class="form-control pw-input" placeholder="Ulangi password" required/>
-              <button type="button" class="pw-toggle" id="togglePw2" aria-label="Tampilkan konfirmasi password">
+              <input
+                type="password"
+                id="confirm_password"
+                name="confirm_password"
+                class="form-control pw-input"
+                placeholder="Ulangi password"
+                required
+              />
+              <button
+                type="button"
+                class="pw-toggle"
+                id="togglePw2"
+                aria-label="Tampilkan konfirmasi password"
+              >
                 <i id="eyeIcon2" class="bi bi-eye"></i>
               </button>
             </div>
@@ -140,32 +398,80 @@
             <input id="agree" name="agree" type="checkbox" disabled />
             <label for="agree" class="m-0">
               Saya setuju dengan
-              <a href="#" id="openTerms" style="color:#0d6efd; font-weight:500">Syarat & Ketentuan</a>
+              <a
+                href="#"
+                id="openTerms"
+                style="color: #0d6efd; font-weight: 500"
+                >Syarat & Ketentuan</a
+              >
             </label>
           </div>
 
           <!-- Fallback onclick: kirim standar bila JS diblokir -->
-          <button type="submit" class="btn-brand" id="btnSubmit" onclick="return submitRegisterFallback()">Daftar</button>
+          <button
+            type="submit"
+            class="btn-brand"
+            id="btnSubmit"
+            onclick="return submitRegisterFallback()"
+          >
+            Daftar
+          </button>
         </form>
 
         <div class="social-title">atau daftar dengan</div>
         <div class="social-row">
           <a href="#" aria-label="Daftar dengan Google" title="Google">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 533.5 544.3" role="img">
-              <path fill="#4285F4" d="M533.5 278.4c0-17.4-1.6-34.1-4.6-50.4H272.1v95.3h146.9c-6.3 33.7-25.2 62.3-53.6 81.5l86.6 67.3c50.5-46.6 81.5-115.2 81.5-193.7z"/>
-              <path fill="#34A853" d="M272.1 544.3c72.9 0 134.1-24.1 178.8-65.5l-86.6-67.3c-24 16.1-54.8 25.6-92.2 25.6-70.9 0-131-47.9-152.6-112.1l-89.7 69.3c44.5 88.1 135.6 150 242.3 150z"/>
-              <path fill="#FBBC05" d="M119.5 324.9c-5.6-16.8-8.8-34.7-8.8-53s3.2-36.2 8.8-53l-89.7-69.3C10.6 181.1 0 226.8 0 271.9s10.6 90.8 29.8 122.3l89.7-69.3z"/>
-              <path fill="#EA4335" d="M272.1 107.3c39.7 0 75.3 13.7 103.3 40.6l77.5-77.5C406.1 24.8 345 0 272.1 0 165.4 0 74.3 61.9 29.8 149.6l89.7 69.3c21.6-64.2 81.7-111.6 152.6-111.6z"/>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              viewBox="0 0 533.5 544.3"
+              role="img"
+            >
+              <path
+                fill="#4285F4"
+                d="M533.5 278.4c0-17.4-1.6-34.1-4.6-50.4H272.1v95.3h146.9c-6.3 33.7-25.2 62.3-53.6 81.5l86.6 67.3c50.5-46.6 81.5-115.2 81.5-193.7z"
+              />
+              <path
+                fill="#34A853"
+                d="M272.1 544.3c72.9 0 134.1-24.1 178.8-65.5l-86.6-67.3c-24 16.1-54.8 25.6-92.2 25.6-70.9 0-131-47.9-152.6-112.1l-89.7 69.3c44.5 88.1 135.6 150 242.3 150z"
+              />
+              <path
+                fill="#FBBC05"
+                d="M119.5 324.9c-5.6-16.8-8.8-34.7-8.8-53s3.2-36.2 8.8-53l-89.7-69.3C10.6 181.1 0 226.8 0 271.9s10.6 90.8 29.8 122.3l89.7-69.3z"
+              />
+              <path
+                fill="#EA4335"
+                d="M272.1 107.3c39.7 0 75.3 13.7 103.3 40.6l77.5-77.5C406.1 24.8 345 0 272.1 0 165.4 0 74.3 61.9 29.8 149.6l89.7 69.3c21.6-64.2 81.7-111.6 152.6-111.6z"
+              />
             </svg>
           </a>
           <a href="#" aria-label="Daftar dengan Apple" title="Apple">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" role="img" fill="#000">
-              <path d="M16.365 1.43c0 1-.41 1.98-1.07 2.7-.69.76-1.84 1.34-2.85 1.24-.13-1.06.46-2.1 1.11-2.77.73-.75 1.99-1.3 2.81-1.17zM20.53 17.08c-.46 1.07-1.01 2.12-1.8 3.16-.96 1.25-2.16 2.8-3.74 2.83-1.4.03-1.85-.82-3.43-.82-1.58 0-2.07.8-3.46.85-1.59.06-2.8-1.35-3.77-2.59-2.06-2.62-3.65-7.41-1.52-10.64 1.08-1.66 2.9-2.71 4.92-2.74 1.53-.03 2.97 1.02 3.43 1.02.46 0 2.38-1.26 4.01-1.07.68.03 2.59.28 3.82 2.16-3.36 1.78-2.83 6.41.54 7.83z"/>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              role="img"
+              fill="#000"
+            >
+              <path
+                d="M16.365 1.43c0 1-.41 1.98-1.07 2.7-.69.76-1.84 1.34-2.85 1.24-.13-1.06.46-2.1 1.11-2.77.73-.75 1.99-1.3 2.81-1.17zM20.53 17.08c-.46 1.07-1.01 2.12-1.8 3.16-.96 1.25-2.16 2.8-3.74 2.83-1.4.03-1.85-.82-3.43-.82-1.58 0-2.07.8-3.46.85-1.59.06-2.8-1.35-3.77-2.59-2.06-2.62-3.65-7.41-1.52-10.64 1.08-1.66 2.9-2.71 4.92-2.74 1.53-.03 2.97 1.02 3.43 1.02.46 0 2.38-1.26 4.01-1.07.68.03 2.59.28 3.82 2.16-3.36 1.78-2.83 6.41.54 7.83z"
+              />
             </svg>
           </a>
           <a href="#" aria-label="Daftar dengan Facebook" title="Facebook">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" role="img">
-              <path fill="#1877F2" d="M24 12a12 12 0 1 0-13.875 11.85v-8.385H7.077V12h3.048V9.356c0-3.012 1.793-4.687 4.533-4.687 1.312 0 2.686.235 2.686.235v2.953h-1.514c-1.494 0-1.96.929-1.96 1.883V12h3.328l-.532 3.465h-2.796v8.385A12.002 12.002 0 0 0 24 12"/>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              role="img"
+            >
+              <path
+                fill="#1877F2"
+                d="M24 12a12 12 0 1 0-13.875 11.85v-8.385H7.077V12h3.048V9.356c0-3.012 1.793-4.687 4.533-4.687 1.312 0 2.686.235 2.686.235v2.953h-1.514c-1.494 0-1.96.929-1.96 1.883V12h3.328l-.532 3.465h-2.796v8.385A12.002 12.002 0 0 0 24 12"
+              />
             </svg>
           </a>
         </div>
@@ -177,24 +483,163 @@
     </div>
 
     <!-- ===== MODAL S&K ===== -->
-    <div class="modal custom-terms" id="termsModal" role="dialog" aria-modal="true" aria-labelledby="termsTitle">
+    <div
+      class="modal custom-terms"
+      id="termsModal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="termsTitle"
+    >
       <div class="modal-card">
         <div class="modal-head">
           <div>
             <h3 class="modal-title" id="termsTitle">Syarat &amp; Ketentuan</h3>
-            <div style="font-size:.8rem;color:#888">Caffora</div>
+            <div style="font-size: 0.8rem; color: #888">Caffora</div>
           </div>
-          <button class="btn-outline-foot" id="closeTerms">Tutup</button>
+          <!-- tombol Tutup dihapus: cukup Batal / backdrop / Setuju menutup -->
         </div>
 
-        <div class="modal-body" id="termsBody">
-          <p><strong>1. Akun &amp; Privasi</strong> – data Anda kami gunakan untuk keperluan layanan.</p>
-          <p><strong>2. Keamanan</strong> – jaga kerahasiaan password.</p>
-          <p><strong>3. Pemesanan &amp; Pembayaran</strong> – pesanan sah setelah pembayaran terkonfirmasi.</p>
-          <p><strong>4. Refund</strong> – mengikuti kebijakan gerai.</p>
-          <p><strong>5. Perubahan</strong> – Caffora dapat memperbarui ketentuan ini sewaktu-waktu.</p>
-          <p>Scroll sampai bawah agar bisa menekan tombol <em>Setuju</em>.</p>
-          <div style="height:260px"></div>
+        <div
+          class="modal-body"
+          id="termsBody"
+          style="font-size: 0.92rem; line-height: 1.6"
+        >
+          <ol
+            style="
+              list-style-type: upper-alpha;
+              padding-left: 1.1rem;
+              margin: 0;
+            "
+          >
+            <li>
+              <strong>Akun & Keamanan</strong>
+              <ol style="list-style-type: decimal; padding-left: 1rem">
+                <li>
+                  Pengguna wajib memberikan data yang benar dan valid saat
+                  pendaftaran.
+                </li>
+                <li>
+                  Pengguna bertanggung jawab atas kerahasiaan akun dan aktivitas
+                  yang terjadi.
+                </li>
+                <li>
+                  Caffora berhak menonaktifkan akun atas indikasi penyalahgunaan
+                  atau pelanggaran.
+                </li>
+              </ol>
+            </li>
+
+            <li>
+              <strong>Informasi Menu & Harga</strong>
+              <ol style="list-style-type: decimal; padding-left: 1rem">
+                <li>
+                  Menu, harga, dan ketersediaan dapat berubah sewaktu-waktu.
+                </li>
+                <li>
+                  Jika terjadi kesalahan informasi atau sistem, Caffora berhak
+                  melakukan pembatalan.
+                </li>
+              </ol>
+            </li>
+
+            <li>
+              <strong>Pemesanan & Pembayaran</strong>
+              <ol style="list-style-type: decimal; padding-left: 1rem">
+                <li>
+                  Pesanan dianggap sah setelah pembayaran berhasil dan
+                  terverifikasi.
+                </li>
+                <li>
+                  Metode pembayaran mengikuti opsi yang tersedia pada
+                  aplikasi/gerai.
+                </li>
+              </ol>
+            </li>
+
+            <li>
+              <strong>Layanan Dine-in & Takeaway</strong>
+              <ol style="list-style-type: decimal; padding-left: 1rem">
+                <li>
+                  Pesanan dine-in hanya dapat digunakan di gerai Caffora yang
+                  berlaku.
+                </li>
+                <li>
+                  Pesanan takeaway wajib diambil sesuai estimasi waktu
+                  pengambilan.
+                </li>
+                <li>
+                  Keterlambatan pengambilan dapat memengaruhi kualitas, dan
+                  tidak menjadi dasar penggantian.
+                </li>
+              </ol>
+            </li>
+
+            <li>
+              <strong>Pembatalan & Pengembalian Dana</strong>
+              <ol style="list-style-type: decimal; padding-left: 1rem">
+                <li>
+                  Pembatalan hanya dapat dilakukan sebelum pesanan diproses.
+                </li>
+                <li>
+                  Pesanan yang sudah diproses tidak dapat dibatalkan kecuali
+                  terjadi kesalahan dari pihak Caffora.
+                </li>
+                <li>
+                  Proses refund mengikuti prosedur dan waktu pemrosesan pihak
+                  penyedia pembayaran.
+                </li>
+              </ol>
+            </li>
+
+            <li>
+              <strong>Keluhan & Kualitas Produk</strong>
+              <ol style="list-style-type: decimal; padding-left: 1rem">
+                <li>Periksa pesanan saat diterima.</li>
+                <li>
+                  Keluhan terkait kualitas dapat diajukan maksimal 1×24 jam.
+                </li>
+              </ol>
+            </li>
+
+            <li>
+              <strong>Privasi Data</strong>
+              <ol style="list-style-type: decimal; padding-left: 1rem">
+                <li>
+                  Data Pengguna digunakan untuk kebutuhan layanan dan
+                  operasional.
+                </li>
+                <li>
+                  Caffora tidak membagikan data tanpa dasar hukum atau izin sah.
+                </li>
+              </ol>
+            </li>
+
+            <li>
+              <strong>Kekayaan Intelektual</strong>
+              <ol style="list-style-type: decimal; padding-left: 1rem">
+                <li>Logo, desain, dan konten merupakan milik Caffora.</li>
+                <li>
+                  Dilarang memperbanyak atau menggunakan konten tanpa izin
+                  tertulis.
+                </li>
+              </ol>
+            </li>
+
+            <li>
+              <strong>Batasan Tanggung Jawab</strong>
+              <ol style="list-style-type: decimal; padding-left: 1rem">
+                <li>
+                  Layanan dapat dipengaruhi kondisi teknis dan operasional.
+                </li>
+                <li>
+                  Tanggung jawab maksimal atas keluhan valid adalah sebesar
+                  nilai transaksi terkait.
+                </li>
+              </ol>
+            </li>
+          </ol>
+
+          <div style="height: 100px"></div>
         </div>
 
         <div class="modal-foot">
@@ -207,12 +652,14 @@
     <script>
       // === Origin & endpoints bersih (HTTPS, tanpa /public)
       const ORIGIN = location.origin.replace(/^http:\/\//i, "https://");
-      const REGISTER_URL    = ORIGIN + "/auth/register";
-      const CHECK_EMAIL_URL = ORIGIN + "/auth/check-email";  // butuh rule .htaccess
-      const VERIFY_PAGE     = ORIGIN + "/verify_otp";
+      const REGISTER_URL = ORIGIN + "/auth/register";
+      const CHECK_EMAIL_URL = ORIGIN + "/auth/check-email"; // butuh rule .htaccess
+      const VERIFY_PAGE = ORIGIN + "/verify_otp";
 
       // Pastikan action absolute clean URL (untuk fallback non-JS)
-      document.getElementById("registerForm").setAttribute("action", REGISTER_URL);
+      document
+        .getElementById("registerForm")
+        .setAttribute("action", REGISTER_URL);
 
       // ===== toggle password =====
       (function () {
@@ -237,29 +684,39 @@
       (function () {
         const modal = document.getElementById("termsModal");
         const openBtn = document.getElementById("openTerms");
-        const closeBtn = document.getElementById("closeTerms");
         const cancelBtn = document.getElementById("cancelTerms");
         const acceptBtn = document.getElementById("acceptTerms");
-        const termsBody = document.getElementById("termsBody");
         const agreeCb = document.getElementById("agree");
+
+        // kontainer scroll sekarang seluruh kartu
+        const modalCard = document.querySelector("#termsModal .modal-card");
+        const termsBody = document.getElementById("termsBody");
 
         function openModal() {
           modal.classList.add("open");
-          termsBody.scrollTop = 0;
+          modalCard.scrollTop = 0;
+          // Jika kontennya pendek, langsung enable
           setTimeout(() => {
-            if (termsBody.scrollHeight <= termsBody.clientHeight + 2) {
+            if (modalCard.scrollHeight <= modalCard.clientHeight + 2) {
               acceptBtn.disabled = false;
             }
           }, 50);
         }
-        function closeModal() { modal.classList.remove("open"); }
+        function closeModal() {
+          modal.classList.remove("open");
+        }
 
-        openBtn.addEventListener("click", (e) => { e.preventDefault(); openModal(); });
-        closeBtn.addEventListener("click", closeModal);
+        openBtn.addEventListener("click", (e) => {
+          e.preventDefault();
+          openModal();
+        });
         cancelBtn.addEventListener("click", closeModal);
 
-        termsBody.addEventListener("scroll", () => {
-          const atBottom = termsBody.scrollTop + termsBody.clientHeight >= termsBody.scrollHeight - 2;
+        // aktifkan "Setuju" ketika sudah scroll ke dasar konten
+        modalCard.addEventListener("scroll", () => {
+          const atBottom =
+            modalCard.scrollTop + modalCard.clientHeight >=
+            modalCard.scrollHeight - 2;
           if (atBottom) acceptBtn.disabled = false;
         });
 
@@ -269,15 +726,18 @@
           closeModal();
         });
 
-        modal.addEventListener("click", (ev) => { if (ev.target === modal) closeModal(); });
+        // klik backdrop menutup modal
+        modal.addEventListener("click", (ev) => {
+          if (ev.target === modal) closeModal();
+        });
       })();
 
       // ===== CEK EMAIL + SUBMIT DENGAN FETCH + FALLBACK =====
       (function () {
         const emailInput = document.getElementById("email");
-        const emailHint  = document.getElementById("emailHint");
-        const submitBtn  = document.getElementById("btnSubmit");
-        const form       = document.getElementById("registerForm");
+        const emailHint = document.getElementById("emailHint");
+        const submitBtn = document.getElementById("btnSubmit");
+        const form = document.getElementById("registerForm");
 
         let emailTaken = false;
         let debounce = null;
@@ -290,43 +750,69 @@
         async function doCheckEmail() {
           const val = emailInput.value.trim();
           if (!val || !val.includes("@") || val.endsWith("@")) {
-            setHint("", false); emailTaken = false; submitBtn.disabled = false; return;
+            setHint("", false);
+            emailTaken = false;
+            submitBtn.disabled = false;
+            return;
           }
           try {
             const url = new URL(CHECK_EMAIL_URL);
             url.searchParams.set("email", val);
             const res = await fetch(url.toString(), {
-              headers: { "X-Requested-With": "XMLHttpRequest", "Accept": "application/json" },
+              headers: {
+                "X-Requested-With": "XMLHttpRequest",
+                Accept: "application/json",
+              },
               cache: "no-store",
-              referrerPolicy: "strict-origin-when-cross-origin"
+              referrerPolicy: "strict-origin-when-cross-origin",
             });
-            const data = await res.json().catch(()=> ({}));
+            const data = await res.json().catch(() => ({}));
             if (data && data.exists) {
               setHint("Email tersebut sudah terdaftar. Silakan login.", true);
-              emailTaken = true; submitBtn.disabled = true;
+              emailTaken = true;
+              submitBtn.disabled = true;
             } else {
-              setHint("", false); emailTaken = false; submitBtn.disabled = false;
+              setHint("", false);
+              emailTaken = false;
+              submitBtn.disabled = false;
             }
           } catch {
             // jangan blok user hanya karena jaringan
-            setHint("", false); emailTaken = false; submitBtn.disabled = false;
+            setHint("", false);
+            emailTaken = false;
+            submitBtn.disabled = false;
           }
         }
 
-        emailInput.addEventListener("keyup", () => { clearTimeout(debounce); debounce = setTimeout(doCheckEmail, 500); });
-        emailInput.addEventListener("blur", () => { clearTimeout(debounce); doCheckEmail(); });
+        emailInput.addEventListener("keyup", () => {
+          clearTimeout(debounce);
+          debounce = setTimeout(doCheckEmail, 500);
+        });
+        emailInput.addEventListener("blur", () => {
+          clearTimeout(debounce);
+          doCheckEmail();
+        });
 
         form.addEventListener("submit", async function (e) {
           e.preventDefault();
 
-          if (emailTaken) { setHint("Email tersebut sudah terdaftar. Silakan login.", true); return; }
+          if (emailTaken) {
+            setHint("Email tersebut sudah terdaftar. Silakan login.", true);
+            return;
+          }
 
           const p1 = document.getElementById("password").value.trim();
           const p2 = document.getElementById("confirm_password").value.trim();
-          if (p1 !== p2) { alert("Konfirmasi password tidak sama."); return; }
+          if (p1 !== p2) {
+            alert("Konfirmasi password tidak sama.");
+            return;
+          }
 
           const agree = document.getElementById("agree");
-          if (!agree.checked) { alert("Silakan baca & setujui Syarat & Ketentuan."); return; }
+          if (!agree.checked) {
+            alert("Silakan baca & setujui Syarat & Ketentuan.");
+            return;
+          }
 
           submitBtn.disabled = true;
 
@@ -338,7 +824,7 @@
               headers: { "X-Requested-With": "XMLHttpRequest" },
               cache: "no-store",
               redirect: "follow",
-              referrerPolicy: "strict-origin-when-cross-origin"
+              referrerPolicy: "strict-origin-when-cross-origin",
             });
 
             // Mode JSON ({status:"ok"})
@@ -346,17 +832,20 @@
               const data = await res.json().catch(() => ({}));
               if (res.ok && (data.status === "ok" || data.ok === true)) {
                 const emailNow = emailInput.value.trim();
-                window.location.href = VERIFY_PAGE + "?email=" + encodeURIComponent(emailNow);
+                window.location.href =
+                  VERIFY_PAGE + "?email=" + encodeURIComponent(emailNow);
                 return;
               }
               const msg = data?.message || "Gagal mendaftar. Coba lagi.";
-              alert(msg); return;
+              alert(msg);
+              return;
             }
 
             // Fallback: redirect HTML → arahkan ke verify_otp
             if (res.ok) {
               const emailNow = emailInput.value.trim();
-              window.location.href = VERIFY_PAGE + "?email=" + encodeURIComponent(emailNow);
+              window.location.href =
+                VERIFY_PAGE + "?email=" + encodeURIComponent(emailNow);
               return;
             }
 
@@ -371,7 +860,7 @@
       })();
 
       // ===== Fallback submit standar (untuk device yang memblokir fetch) =====
-      function submitRegisterFallback(){
+      function submitRegisterFallback() {
         const form = document.getElementById("registerForm");
         form.action = "/auth/register"; // pastikan clean URL di fallback
         return true; // biarkan form submit normal; backend redirect ke /verify_otp

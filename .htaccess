@@ -25,8 +25,8 @@ RewriteRule ^ / [R=301,L]
 # 4) BACKEND GUARD
 # --- ALLOWLIST: ijinkan endpoint yang memang dipanggil form/JS
 #     (harus diletakkan SEBELUM rule blokir /backend)
-# Auth core
-RewriteRule ^backend/(login|register|verify_otp|check_email|auth_status|logout)\.php$ - [L]   # ← tambah logout
+#     ⬇️ sudah ditambah auth_register & send_otp
+RewriteRule ^backend/(login|auth_register|verify_otp|send_otp|check_email|auth_status|logout)\.php$ - [L]
 # Semua API di /backend/api/* termasuk orders_cancel.php, notifications.php, dsb.
 RewriteRule ^backend/api/ - [L]
 
@@ -50,8 +50,6 @@ RewriteRule ^karyawan$                                 public/karyawan/index.php
 RewriteRule ^customer$                                 public/customer/index.php             [L]
 
 # ----- DASHBOARD SUBPAGES (sidebar clean URLs) -----
-# /admin/orders, /admin/catalog, /admin/users, /admin/finance, /admin/notifications_send,
-# /admin/audit, /admin/settings, /admin/help, /admin/receipt, dll.
 RewriteRule ^admin/([a-z0-9_-]+)$                      public/admin/$1.php                   [QSA,L]
 RewriteRule ^karyawan/([a-z0-9_-]+)$                   public/karyawan/$1.php                [QSA,L]
 RewriteRule ^customer/([a-z0-9_-]+)$                   public/customer/$1.php                [QSA,L]
@@ -59,10 +57,12 @@ RewriteRule ^customer/([a-z0-9_-]+)$                   public/customer/$1.php   
 # ----- ENDPOINT BERSIH -> backend -----
 # Auth (POST/GET/AJAX) via /auth/*
 RewriteRule ^auth/login$                               backend/login.php                     [QSA,L]
-RewriteRule ^auth/logout$                              backend/logout.php                    [QSA,L]  # ← tambah route clean
-RewriteRule ^auth/register$                            backend/register.php                  [QSA,L]
+RewriteRule ^auth/logout$                              backend/logout.php                    [QSA,L]
+# ⬇️ diarahkan ke file baru auth_register.php
+RewriteRule ^auth/register$                            backend/auth_register.php             [QSA,L]
 RewriteRule ^auth/verify$                              backend/verify_otp.php                [QSA,L]
-RewriteRule ^auth/otp-resend$                          backend/verify_otp.php                [QSA,L]
+# ⬇️ resend OTP sekarang ke send_otp.php (bukan verify_otp.php)
+RewriteRule ^auth/otp-resend$                          backend/send_otp.php                  [QSA,L]
 RewriteRule ^auth/check-email$                         backend/check_email.php               [QSA,L]
 RewriteRule ^auth/status$                              backend/auth_status.php               [QSA,L]
 
